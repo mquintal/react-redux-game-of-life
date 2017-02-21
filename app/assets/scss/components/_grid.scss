@@ -1,0 +1,37 @@
+.gf-grid {
+  width: 100%;
+}
+
+.gf-grid-row {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  &:last-child {
+    border-bottom-width: 0;
+  }
+}
+.gf-grid-cell {
+  display: inline-block;
+  width: 100% / $grid-n-cols;
+  background: $grid-cell-color-base;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  position: relative;
+  overflow: hidden;
+  float: left;
+
+  &:before{
+      content: "";
+      display: block;
+      padding-top: 100%;
+  }
+
+  &.active {
+    background: $grid-cell-color-active;
+  }
+
+  &:first-child {
+    border-left-color: $grid-cell-color-base;
+  }
+}

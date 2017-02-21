@@ -1,0 +1,26 @@
+.gf-controllers {
+  display: inline-block;
+
+  .gf-btn {
+    margin-right: $space;
+    width: $button-size;
+    height: $button-size;
+  }
+
+  .gf-input-range {
+    padding: (2*$space) $space;
+
+    .input-range__track--active,
+    .input-range__slider {
+      background: $color-base;
+    }
+
+    .input-range__slider {
+      border-color: $color-base;
+    }
+
+    .input-range__label {
+      font-size: $font-size-small;
+    }
+  }
+}

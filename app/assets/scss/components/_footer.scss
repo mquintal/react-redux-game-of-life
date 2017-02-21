@@ -1,0 +1,12 @@
+.gf-footer {
+  padding: $space $space 0 $space;
+  border-top: 2px solid $color-light;
+  height: 200px;
+
+  p {
+    color: $color-base;
+    text-align: center;
+    font-size: $font-size;
+    text-transform: lowercase;
+  }
+}

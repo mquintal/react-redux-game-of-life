@@ -1,0 +1,10 @@
+.gf-header {
+  padding: $space;
+  margin-bottom: $space;
+  color: $color-base;
+  border-bottom: 4px solid $color-base;
+
+  h1 {
+    font-size: $font-size-title;
+  }
+}

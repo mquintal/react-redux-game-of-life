@@ -1,0 +1,9 @@
+export const GAME_START = 'ACTION_GAME_START';
+export const GAME_PROGRESS = 'ACTION_GAME_PROGRESS';
+export const GAME_PAUSE = 'ACTION_GAME_PAUSE';
+
+export default {
+  GAME_START,
+  GAME_PROGRESS,
+  GAME_PAUSE,
+};

@@ -1,0 +1,29 @@
+@media all and (max-width: 500px) {
+  .gf-controllers {
+    display: block;
+
+    .gf-btn {
+      width: 100%;
+      margin-bottom: $space;
+    }
+  }
+
+  .gf-shapes {
+    display: block;
+
+    .gf-shape {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      margin-bottom: $space;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .gf-grid {
+        width: $button-size;
+      }
+    }
+  }
+}

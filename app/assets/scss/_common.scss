@@ -1,0 +1,55 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  color: $color-text-base;
+  font-size: $font-size;
+}
+
+.gf-grid-container,
+.gf-panel-container {
+  padding: 0 $space;
+  margin-bottom: $space;
+}
+
+.gf-panel-container {
+  display: flex;
+  > div {
+
+    p {
+      line-height: 120%;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+.gf-btn {
+  background: $color-base;
+  color: $color-text-revert;
+  font-size: $font-size-big;
+  border-radius: $button-radius;
+  border-width: 0;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:disabled {
+    border: $button-border-size solid $color-base;
+    background: $color-text-revert;
+    color: $color-base;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+}
+
+@media all and (max-width: 800px) {
+  .gf-panel-container {
+    display: block;
+
+    > div {
+      display: block;
+    }
+  }
+}

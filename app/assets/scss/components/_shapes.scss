@@ -1,0 +1,26 @@
+
+.gf-shapes {
+  display: inline-block;
+
+  .gf-shape {
+    @extend .gf-btn;
+    background: transparent;
+    border: $button-border-size solid $color-border-base;
+    margin-right: $space;
+    width: $button-size;
+    height: $button-size;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      border-color: $color-base;
+      border-width: $button-border-size;
+    }
+
+    .gf-grid-cell {
+      width: 33%;
+    }
+  }
+}

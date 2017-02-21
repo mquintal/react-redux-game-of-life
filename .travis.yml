@@ -1,0 +1,33 @@
+language: node_js
+node_js:
+- stable
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_7f5294dbadf7_key -iv $encrypted_7f5294dbadf7_iv -in deploy_key.enc -out deploy_key -d
+- chmod 600 deploy_key
+- eval `ssh-agent -s`
+- ssh-add deploy_key
+
+install:
+- npm install
+
+script:
+- npm run build
+- cp ./app/index.html ./dist/index.html
+- cd ./dist
+- git init
+- git config --local user.email "${COMMIT_AUTHOR_EMAIL}"
+- git config --local user.name "${COMMIT_AUTHOR_NAME} (travis ci)"
+- git remote add origin git@github.com:${GITHUB_REPO}.git
+- git remote -v
+- git checkout -B ${TARGET_BRANCH}
+- git add .
+- git commit -m "Deploy to Github Pages"
+- git push -f origin ${TARGET_BRANCH}
+
+env:
+  global:
+    - GITHUB_REPO: "mquintal/react-redux-game-of-life"
+    - COMMIT_AUTHOR_EMAIL: "mquintal88@gmail.com"
+    - COMMIT_AUTHOR_NAME: "Miguel Quintal"
+    - TARGET_BRANCH: "gh-pages"

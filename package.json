@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --port 3000 --content-base ./app/",
-    "build": "./node_modules/.bin/webpack --optimize-minimize"
+    "build": "./node_modules/.bin/webpack --optimize-minimize",
+    "test": "./node_modules/.bin/jest"
   },
   "author": "Miguel Quintal <mquintal88@gmail.com>",
   "license": "ISC",
@@ -30,6 +31,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
+    "jest-cli": "^19.0.2",
     "node-sass": "^4.3.0",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",

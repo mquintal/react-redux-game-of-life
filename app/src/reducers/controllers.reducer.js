@@ -16,7 +16,7 @@ const reducer = (state = initialState, action) => {
       return { ...state, canPause: false, canPlay: true, canClear: true };
 
     case CONTROLLERS_CLEAR:
-      return { ...state, canClear: true, canPlay: true, canPause: true };
+      return { ...state, canClear: false, canPlay: true, canPause: true };
 
     case CONTROLLERS_SPEED:
       return { ...state, speed: action.payload };

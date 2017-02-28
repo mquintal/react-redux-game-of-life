@@ -24,10 +24,8 @@ export function clear() {
 }
 
 export function speed(value) {
-  return (dispatch) => {
-    dispatch({
-      type: ACTIONS.CONTROLLERS_SPEED,
-      payload: value,
-    });
+  return {
+    type: ACTIONS.CONTROLLERS_SPEED,
+    payload: value,
   };
 }

@@ -33,6 +33,7 @@
     "eslint-plugin-react": "^6.9.0",
     "jest-cli": "^19.0.2",
     "node-sass": "^4.3.0",
+    "redux-mock-store": "^1.2.2",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
